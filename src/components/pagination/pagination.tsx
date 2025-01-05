@@ -13,7 +13,7 @@ export const Pagination = ({ numberOfPage }: IPagination) => {
       pages.push(
         <div
           key={i}
-          className={`cursor-pointer rounded-lg border-2 border-solid border-gray-200 p-2 ${parseInt(activePage) === i ? 'bg-slate-200' : ''}`}
+          className={`cursor-pointer rounded-lg border-2 border-solid border-border p-2 text-tUnSelected ${parseInt(activePage) === i ? 'bg-bgPrimary text-tBase' : ''}`}
           onClick={() => handlePageClick(i)}
         >
           {i}
