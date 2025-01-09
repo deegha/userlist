@@ -13,7 +13,7 @@ export const Layout = ({ children }: ILayout) => {
       className={`flex flex-col items-center justify-start theme-${theme} min-h-screen bg-bgSecondary`}
     >
       <Navigation />
-      <div className="w-full px-10">{children}</div>
+      <div className="flex w-full flex-col gap-5 px-10">{children}</div>
     </main>
   );
 };

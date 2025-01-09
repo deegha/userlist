@@ -24,7 +24,7 @@ export const Pagination = ({ numberOfPage }: IPagination) => {
     return pages;
   };
   return (
-    <div className="flex items-center justify-start gap-5 px-2 py-10">
+    <div className="flex items-center justify-start gap-5 px-2">
       {renderPage()}
     </div>
   );

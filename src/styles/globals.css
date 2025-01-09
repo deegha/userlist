@@ -11,7 +11,7 @@
     --color-text-hover : #262525;
     --color-bg-primary :  #ededed;
     --color-bg-secondary :  #fffcfc;
-    --color-border :  #c8c8c8;
+    --color-border :  #e0e0e0;
   }
 
   * {
@@ -22,7 +22,7 @@
 .theme-dark {
     --color-primary :#ededed  ;
     --color-secondary : #989494;
-    --color-text-base : #989494;
+    --color-text-base : #ffffff;
     --color-text-unselected : #797777;
     --color-text-hover : #262525;
     --color-bg-primary :  #3c3c3c;

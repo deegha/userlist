@@ -9,6 +9,7 @@ interface ITheme {
 const initialState: ITheme = {
   theme: 'light',
 };
+
 export const themeSlice = createSlice({
   name: 'theme',
   initialState,
