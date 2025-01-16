@@ -45,7 +45,7 @@ export const UserForm = ({ id }: { id?: string }) => {
         validationSchema={CreateUserSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="flex w-[800px] flex-col gap-5 rounded-lg bg-bgPrimary p-10">
+        <Form className="flex w-full flex-col gap-5 rounded-lg bg-bgPrimary p-10 md:w-[800px]">
           <Field name="name" as={Input} label={'Name'} />
           <Field name="age" as={Input} label={'Age'} />
           <Field name="city" as={Input} label={'City'} />

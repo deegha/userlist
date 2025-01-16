@@ -6,7 +6,7 @@ import { setTheme } from '@/redux/slices/themeSlice';
 const navItems = [
   {
     name: 'Home',
-    url: '/home',
+    url: '/',
     icon: 'faHome',
   },
   {
