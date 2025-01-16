@@ -2,11 +2,18 @@ interface IButton {
   text: string;
   variant: 'primary' | 'secondary' | 'danger';
   type?: 'submit' | 'reset' | 'button';
-  loading: boolean;
+  loading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
 }
-export const Button = ({ text, type, loading, variant, disabled }: IButton) => {
+export const Button = ({
+  text,
+  type,
+  loading,
+  variant,
+  disabled,
+  onClick,
+}: IButton) => {
   const baseStyles = `inline-flex items-center justify-center px-6 py-2 text-base font-medium transition duration-200 rounded-lg focus:outline-none focus:ring`;
   const variantStyles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300',
@@ -17,6 +24,7 @@ export const Button = ({ text, type, loading, variant, disabled }: IButton) => {
   const disabledStyles = `opacity-50 cursor-not-allowed`;
   return (
     <button
+      onClick={onClick}
       type={type}
       className={`${baseStyles} ${disabled ? disabledStyles : variantStyles[variant]}`}
     >
