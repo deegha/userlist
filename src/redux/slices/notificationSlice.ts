@@ -20,13 +20,13 @@ export const notificationSlice = createSlice({
       state,
       action: PayloadAction<{ message: string; type: TNotificationType }>,
     ) => {
-      console.log('called notifacitons');
+      console.log('called notifications');
       state.message = action.payload.message;
       state.type = action.payload.type;
       state.hasNotification = true;
     },
     clearNotification: (state) => {
-      console.log('clear notifacitons');
+      console.log('clear notifications');
       state.message = undefined;
       state.type = undefined;
       state.hasNotification = false;
