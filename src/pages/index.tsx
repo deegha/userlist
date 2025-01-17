@@ -20,11 +20,12 @@ export default function Dashboard() {
 
   return (
     <Layout>
-      <h1 className="text-lg">Dashboard</h1>
+      <h1 className="text-[27px] text-tBase">Dashboard</h1>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex w-2 w-[400px] flex-col items-center gap-5 rounded-lg bg-bgForm p-10">
         <div>{!loading && <PieChart data={chartData} />}</div>
-        <div className="flex gap-5 text-tBase">
+        <p>Showing how many users in each city</p>
+        <div className="flex gap-5 text-sm text-secondary">
           <p className="font-bold">Note:</p>
           <p className="w-[200px]">
             Since we have lot of data we are showing the first 14 data points

@@ -26,12 +26,31 @@ const autoSizeStrategy: SizeColumnsToFitGridStrategy = {
   type: 'fitGridWidth',
 };
 
+const lightTheme = themeQuartz.withParams({
+  backgroundColor: '#ffffff',
+  foregroundColor: '#000',
+  headerTextColor: '#27282c',
+  headerBackgroundColor: '#f1f2f6',
+  oddRowBackgroundColor: '#f6f9ff',
+});
+
+const darkTheme = themeQuartz.withParams({
+  backgroundColor: '#222325',
+  foregroundColor: '#7b7b7d',
+  headerTextColor: '#606064',
+  headerBackgroundColor: '#1e1e1e',
+  oddRowBackgroundColor: '#292a2c',
+});
+
 const ListUser = () => {
   const { activePage } = usePagination();
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const { users, loading, sortBy, order, searchQuery } = useAppSelector(
-    (state) => state.users,
+  const { users, loading, sortBy, order, searchQuery, theme } = useAppSelector(
+    (state) => ({
+      ...state.users,
+      ...state.theme,
+    }),
   );
 
   useEffect(() => {
@@ -76,7 +95,7 @@ const ListUser = () => {
       <div className="h-full w-full flex-1">
         <AgGridReact
           defaultColDef={defaultColDef}
-          theme={themeQuartz}
+          theme={theme === 'light' ? lightTheme : darkTheme}
           rowData={users}
           columnDefs={tableHeading}
           loading={loading}
@@ -86,6 +105,11 @@ const ListUser = () => {
         />
       </div>
       <Pagination numberOfPage={10} />
+      <div className="flex w-full justify-center">
+        <p className="text-sm text-secondary">
+          you can click a record to view details or edit!
+        </p>
+      </div>
     </Layout>
   );
 };

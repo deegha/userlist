@@ -7,8 +7,8 @@ interface IPieChart {
 }
 
 export const PieChart = ({ data }: IPieChart) => {
-  const width = 400;
-  const height = 400;
+  const width = 200;
+  const height = 200;
   const radius = Math.min(width, height) / 2;
   const donutThickness = radius / 2;
 

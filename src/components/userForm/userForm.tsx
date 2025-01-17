@@ -65,7 +65,7 @@ export const UserForm = ({ id }: { id?: string }) => {
             label={'Occupation'}
             placeholder="Enter Occupation"
           />
-          <div className="flex w-full justify-end">
+          <div className="flex w-full justify-center md:justify-end">
             <Button
               size="small"
               disabled={loading}
