@@ -1,5 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { fetchUsersApiCall } from '@/services/userService';
+import {
+  fetchUsersApiCall,
+  fetchAllUsersApiCall,
+} from '@/services/userService';
 import { TUser } from '@/types/user';
 
 import { setNotification } from './notificationSlice';
@@ -68,6 +71,25 @@ export const fetchUsersThunk = createAsyncThunk<
     { dispatch },
   ) => {
     const data = await fetchUsersApiCall(page, sortBy, order, searchQuery);
+
+    if (data === 'Not found') {
+      dispatch(
+        setNotification({
+          message: 'No records found',
+          type: 'ERROR',
+        }),
+      );
+    }
+
+    return data;
+  },
+);
+
+export const fetchAllUsersThunk = createAsyncThunk<TUser[] | 'Not found'>(
+  'fetchUsers',
+  async (undefined, { dispatch }) => {
+    const data = await fetchAllUsersApiCall();
+
     if (data === 'Not found') {
       dispatch(
         setNotification({

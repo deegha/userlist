@@ -28,6 +28,14 @@ export const fetchUsersApiCall = async (
   });
 };
 
+export const fetchAllUsersApiCall = async () => {
+  return await fetchApi<undefined, Array<TUser> | 'Not found'>({
+    method: 'GET',
+    baseURL: baseURL,
+    resource: `users`,
+  });
+};
+
 export const createUserApiCall = async (user: TUserCreate) => {
   console.log('Creating user', user);
 

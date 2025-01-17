@@ -6,6 +6,7 @@ import { Button } from './button/button';
 import { UserForm } from './userForm/userForm';
 import { Search } from './search/search';
 import { Notification } from './notification/notification';
+import { PieChart } from './pieChart/pieChart';
 
 export {
   Navigation,
@@ -16,4 +17,5 @@ export {
   UserForm,
   Search,
   Notification,
+  PieChart,
 };
