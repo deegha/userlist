@@ -15,7 +15,9 @@ export const Input = ({
 }: IInput) => {
   return (
     <div className="flex flex-col gap-1">
-      {label && <label className="font-semibold text-tBase">{label}</label>}
+      {label && (
+        <label className="text-sm font-semibold text-tBase">{label}</label>
+      )}
       <div className="border-1 rounded-sm border-border bg-bgTextInput p-2">
         <input
           {...props}
