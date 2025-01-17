@@ -18,7 +18,7 @@ export const Input = ({
       {label && (
         <label className="text-sm font-semibold text-tBase">{label}</label>
       )}
-      <div className="border-1 rounded-sm border-border bg-bgTextInput p-2">
+      <div className="rounded-md border border-border bg-bgTextInput p-2">
         <input
           {...props}
           name={name}

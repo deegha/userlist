@@ -65,13 +65,16 @@ export const UserForm = ({ id }: { id?: string }) => {
             label={'Occupation'}
             placeholder="Enter Occupation"
           />
-          <Button
-            disabled={loading}
-            variant="primary"
-            type="submit"
-            text={isEditing ? 'Save User' : 'Create User'}
-            loading={loading}
-          />
+          <div className="flex w-full justify-end">
+            <Button
+              size="small"
+              disabled={loading}
+              variant="primary"
+              type="submit"
+              text={isEditing ? 'Save User' : 'Create User'}
+              loading={loading}
+            />
+          </div>
         </Form>
       </Formik>
     </>

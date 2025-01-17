@@ -30,6 +30,7 @@ export const Search = () => {
             showErrors={false}
           />
           <Button
+            size="small"
             type="submit"
             text="Search"
             loading={loading}

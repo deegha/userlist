@@ -11,10 +11,10 @@
     --color-text-hover : #262525;
     --color-bg-primary :  #ededed;
     --color-bg-secondary :  #f7fafb;
-    --color-border :  #e0e0e0;
+    --color-border :  #dce0f3;
     --color-bg-form: #ffffff;
     --color-bg-text-input: #fafafa;
-    --color-text-input: #7a7a83;
+    --color-text-input: #000000;
   }
 
   * {
@@ -29,7 +29,7 @@
     --color-text-unselected : #797777;
     --color-text-hover : #262525;
     --color-bg-primary :  #3c3c3c;
-    --color-border :  #4c4949;
+    --color-border :  #323538;
     --color-bg-secondary :  #000000;
     --color-bg-form: #202426;
     --color-bg-text-input: #363636;

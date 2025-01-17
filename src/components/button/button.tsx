@@ -5,6 +5,7 @@ interface IButton {
   loading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
+  size: 'small' | 'free';
 }
 export const Button = ({
   text,
@@ -13,20 +14,22 @@ export const Button = ({
   variant,
   disabled,
   onClick,
+  size,
 }: IButton) => {
-  const baseStyles = `inline-flex items-center justify-center px-6 py-2 text-base font-medium transition duration-200 rounded-sm focus:outline-none focus:ring`;
+  const baseStyles = `inline-flex items-center justify-center px-6 py-2 text-base font-medium transition duration-200 rounded-md focus:outline-none focus:ring`;
   const variantStyles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300',
     secondary:
       'bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-gray-300',
     danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-300',
   };
-  const disabledStyles = `opacity-80 cursor-not-allowed`;
+  const disabledStyles = ` cursor-not-allowed`;
+  const sizeStyles = `${size === 'small' ? 'w-[150px]' : ''}`;
   return (
     <button
       onClick={onClick}
       type={type}
-      className={`${baseStyles} ${disabled ? disabledStyles : variantStyles[variant]}`}
+      className={`${baseStyles} ${disabled ? disabledStyles : variantStyles[variant]} ${sizeStyles}`}
     >
       {loading ? (
         <>

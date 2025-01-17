@@ -12,11 +12,11 @@ export const Notification = () => {
     if (hasNotification) {
       setTimeout(() => {
         dispatch(clearNotification());
-      }, 1000);
+      }, 1500);
     }
   }, [dispatch, hasNotification]);
 
-  const dynamicStyles = type === 'ERROR' ? 'bg-red-500' : 'bg-green-500';
+  const dynamicStyles = type === 'ERROR' ? 'bg-rose-600' : 'bg-teal-500';
 
   return (
     <div
