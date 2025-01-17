@@ -21,7 +21,7 @@ export const Button = ({
       'bg-gray-100 text-gray-800 hover:bg-gray-200 focus:ring-gray-300',
     danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-300',
   };
-  const disabledStyles = `opacity-50 cursor-not-allowed`;
+  const disabledStyles = `opacity-80 cursor-not-allowed`;
   return (
     <button
       onClick={onClick}
