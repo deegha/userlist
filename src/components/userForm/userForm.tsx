@@ -45,11 +45,26 @@ export const UserForm = ({ id }: { id?: string }) => {
         validationSchema={CreateUserSchema}
         onSubmit={handleSubmit}
       >
-        <Form className="flex w-full flex-col gap-5 rounded-lg bg-bgPrimary p-10 md:w-[800px]">
-          <Field name="name" as={Input} label={'Name'} />
-          <Field name="age" as={Input} label={'Age'} />
-          <Field name="city" as={Input} label={'City'} />
-          <Field name="occupation" as={Input} label={'Occupation'} />
+        <Form className="flex w-full flex-col gap-5 rounded-lg bg-bgForm p-10 md:w-[800px]">
+          <Field
+            name="name"
+            as={Input}
+            placeholder="Enter Name"
+            label={'Name'}
+          />
+          <Field name="age" as={Input} label={'Age'} placeholder="Enter Age" />
+          <Field
+            name="city"
+            as={Input}
+            label={'City'}
+            placeholder="Enter City"
+          />
+          <Field
+            name="occupation"
+            as={Input}
+            label={'Occupation'}
+            placeholder="Enter Occupation"
+          />
           <Button
             disabled={loading}
             variant="primary"

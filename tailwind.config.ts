@@ -17,7 +17,19 @@ export default {
         bgPrimary: 'var(--color-bg-primary)',
         bgSecondary: 'var(--color-bg-secondary)',
         border: 'var(--color-border)',
+        bgForm: 'var(--color-bg-form)',
+        bgTextInput: 'var(--color-bg-text-input)',
+        colorTextInput: 'var(--color-text-input)',
       },
+    },
+    keyframes: {
+      appear: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
+    },
+    animation: {
+      appear: 'appear 0.5s ease-out',
     },
   },
   plugins: [],

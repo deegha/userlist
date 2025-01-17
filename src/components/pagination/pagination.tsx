@@ -13,7 +13,7 @@ export const Pagination = ({ numberOfPage }: IPagination) => {
       pages.push(
         <div
           key={i}
-          className={`cursor-pointer rounded-lg border-2 border-solid border-border p-1 text-tUnSelected md:p-2 ${parseInt(activePage) === i ? 'bg-bgPrimary text-tBase' : ''}`}
+          className={`cursor-pointer rounded-lg border-solid border-border text-tUnSelected md:p-2 ${parseInt(activePage) === i ? 'bg-bgPrimary text-tBase' : ''}`}
           onClick={() => handlePageClick(i)}
         >
           {i}
@@ -39,12 +39,8 @@ export const Pagination = ({ numberOfPage }: IPagination) => {
       <div className="hidden items-center justify-start gap-5 px-2 md:flex">
         {renderPage()}
       </div>
-      <div className="flex w-full items-center justify-start justify-center gap-5 px-2 md:hidden">
-        <Button
-          onClick={handlePreviousPage}
-          variant="primary"
-          text="Previous"
-        />
+      <div className="flex w-full items-center justify-center gap-5 px-2 md:hidden">
+        <Button onClick={handlePreviousPage} variant="primary" text="Prev" />
 
         <Button onClick={handleNextPage} variant="primary" text="Next" />
       </div>

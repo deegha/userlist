@@ -14,7 +14,7 @@ export const Button = ({
   disabled,
   onClick,
 }: IButton) => {
-  const baseStyles = `inline-flex items-center justify-center px-6 py-2 text-base font-medium transition duration-200 rounded-lg focus:outline-none focus:ring`;
+  const baseStyles = `inline-flex items-center justify-center px-6 py-2 text-base font-medium transition duration-200 rounded-sm focus:outline-none focus:ring`;
   const variantStyles = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300',
     secondary:
@@ -31,7 +31,7 @@ export const Button = ({
       {loading ? (
         <>
           <svg
-            className="mr-2 h-5 w-5 animate-spin text-white"
+            className="animate-spin mr-2 h-5 w-5 text-white"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
