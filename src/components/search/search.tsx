@@ -15,7 +15,6 @@ export const Search = () => {
   }, [dispatch]);
 
   const handleSubmit = (values: { searchText: string }) => {
-    console.log(values);
     dispatch(setSearch({ search: values.searchText }));
   };
 
