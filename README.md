@@ -30,3 +30,4 @@ https://userlist-beta.vercel.app
 - Apologies for the project is not 100% (the dashboard is yet to complete) as its hard to finish everything with other commitments
 - Didn't had a chance to spend time on figma to design something beautiful
 - Architecture, code quality and coding standards are in the hight of standards but didn't have a UI to follow.
+- Apart form the get request any other requests will be just simulates, meaning if we try to create a user, it will do the request the backend will receive and will respond back with 200 but it will not create the resource
